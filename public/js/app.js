@@ -42742,7 +42742,7 @@ Echo.channel('notifications').listen('UserSessionChanged', function (e) {
   notificationElement.classList.remove('invisible');
   notificationElement.classList.remove('alert-success');
   notificationElement.classList.remove('alert-danger');
-  notificationElement.classList.add("alert-".concat(e.type));
+  notificationElement.classList.add('alert-' + e.type);
 });
 
 /***/ }),

@@ -10,7 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class UserSessionChanged
+class UserSessionChanged implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -39,6 +39,6 @@ class UserSessionChanged
     {
         #\Log::debug("{$this->message}");
         #\Log::debug("{$this->type}");
-        return new PrivateChannel('notifications');
+        return new Channel('notifications');
     }
 }
