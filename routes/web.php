@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('/users', 'users.showAll')->name('user.all');
+
+Route::view('/game', 'game.show')->name('game.show');
